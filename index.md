@@ -28,7 +28,7 @@ The cafe point data was originally in a geospatial format, while the census trac
 There were issues in data quality, one of them were outliers both in case of the number of cafes and lower quantiles of population, additionally, another issue experienced was census tracts with less population by more number of cafes; these are the outliers like JFK airport, we will remove them further. Otherwise, in terms of data quality, OSM dataset is not reliable, there are total ~3,600 coffee shops in nyc and the dataset has only 2591 observations. Since this is an academic project and our focus is strictly on methodology, we are using this dataset as is. 
 
 ## Interactive Map: 
-<iframe src="map.html" style="border:none; width:100%; height:800px;"> </iframe>
+<iframe src="https://github.com/nilayvinchhi/cafe/blob/main/map.html" style="border:none; width:100%; height:800px;"> </iframe>
 
 ## Static Maps:
 <div style="display: flex;">
