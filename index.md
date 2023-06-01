@@ -1,6 +1,6 @@
 # Exploring the Geospatial Dynamics of Third Wave and Local Cafes in New York City
 ### Author: <a href="mailto:nilayvinchhi@gmail.com">Nilay Vinchhi</a>
-##Introduction
+## Introduction
 The proposed research project aims to provide an in-depth understanding of the clustering patterns of third wave and local cafes in New York City (NYC). Third wave and local cafes have gained popularity in recent years due to their focus on specialty coffee, unique atmosphere, and locally-sourced ingredients. These cafes have played a significant role in driving the growth of the coffee industry in the city. By examining the spatial distribution of these cafes and analyzing the factors contributing to their clustering, this study seeks to shed light on the dynamics of NYC's cafe culture.
 
 ## Research Questions
