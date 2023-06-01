@@ -1,31 +1,53 @@
-# Understanding Clustering of Cafes in NYC
-### (Third Wave and Local Cafe)
+# Exploring the Geospatial Dynamics of Third Wave and Local Cafes in New York City
+### Author: <a href="mailto:nilayvinchhi@gmail.com">Nilay Vinchhi</a>
+##Introduction
+The proposed research project aims to provide an in-depth understanding of the clustering patterns of third wave and local cafes in New York City (NYC). Third wave and local cafes have gained popularity in recent years due to their focus on specialty coffee, unique atmosphere, and locally-sourced ingredients. These cafes have played a significant role in driving the growth of the coffee industry in the city. By examining the spatial distribution of these cafes and analyzing the factors contributing to their clustering, this study seeks to shed light on the dynamics of NYC's cafe culture.
 
-## Brief:
-The proposed project titled "Understanding Clustering of Third Wave and Local Cafes in NYC" aims to examine the spatial patterns and factors that contribute to the clustering of these types of cafes within the city of New York. This project is inspired by the article "The Next Wave: Predicting the future of coffee in New York City, Links to an external site." which highlights the increasing popularity of third wave and local cafes in the city. These types of cafes are characterized by their focus on specialty coffee, unique atmosphere, and locally-sourced ingredients, and have been driving the growth of the coffee industry in the city.
+## Research Questions
+The project will address the following research questions:
 
-The main research questions for this project are:
+1. Where are the clusters of third wave and local cafes located in NYC?
+2. Which demographic characteristics of the surrounding neighborhoods influence the clustering of these cafes? Factors such as income, age, gender, and dependency ratio will be considered.
+3. How far are individuals willing to travel to access these cafes?
+## Data Sources
+To investigate these research questions, the project will utilize two primary datasets:
 
-- Where is the clustering of third wave and local cafes occurring in NYC?
+1. OSM POI Data: This dataset provides point data on the locations of cafes in NYC. The dataset was obtained from the OpenStreetMap (OSM) database using the Overpass Turbo API. It should be noted that the OSM dataset may have limitations in terms of completeness and accuracy.
 
-- What aspects of the surrounding neighborhood, such as income, age, gender, or dependency ratio, are affecting the clustering of these cafes?
+2. Census Tracts Data: This dataset includes demographic information on the surrounding neighborhoods, such as income, age, gender, and dependency ratio. The data will be obtained from the TIGER shapefiles and census demographics data provided by the US Census Bureau.
 
-- How far are people willing to travel to access these cafes?
+## Methodology
+The project will employ GIS tools and spatial analysis techniques in Python to analyze the datasets. The following methods will be utilized:
 
-To address these research questions, the project will utilize two datasets: the OSM POI data, which provides point data on the locations of cafes filtered as "cafe," and the census tracts data, which includes demographic information on the surrounding neighborhoods such as income, age, gender, and dependency ratio. These datasets will be analyzed using GIS tools and spatial analysis techniques in python, including chloropleth maps, multi-linear regression, and distance analysis.
+1. Spatial Join: To combine the cafe point data with the census tracts data, a spatial join operation will be performed. This operation will merge the attributes of the two datasets based on their spatial relationship.
 
-The static maps portion of the project will include chloropleth maps visualizing the median age of the surrounding neighborhoods and the cafe per thousand people ratio. A multi-linear regression will also be conducted on the census tracts with the highest cafe per thousand people ratio to examine the relationships between these variables.
+2. Data Aggregation: The data will be aggregated to a higher level of resolution, such as census tracts or neighborhoods. This will allow for a comprehensive analysis of the demographic characteristics of the areas surrounding the cafes.
 
-The interactive map portion of the project will utilize a florium map with a heatmap layer to visualize the locations of the cafes and the analysis conducted in the static maps portion. This map will also allow the user to toggle between the various layers of analysis to further explore the data.
+3. Chloropleth Maps: Static maps will be generated to visualize the median age of the surrounding neighborhoods and the cafe-to-population ratio. These maps will provide insights into the spatial patterns of cafes and their relationship with demographic variables.
 
-There are no major concerns with obtaining and cleaning the data for this project. However, care will need to be taken to ensure that the data is accurately merged and analyzed, and that any outliers or anomalies are properly accounted for in the analysis.
+4. Multi-linear Regression: A multi-linear regression analysis will be conducted on the census tracts with the highest cafe-to-population ratio. This analysis will help identify the relationships between demographic variables and the clustering of cafes.
 
-Overall, this project aims to provide a more detailed understanding of the clustering of third wave and local cafes in NYC and the factors that contribute to this clustering. By utilizing GIS tools and spatial analysis techniques, the project will be able to provide insights that can inform the decisions of cafe owners, urban planners, and policymakers.
+5. Distance Analysis: The project will explore the distance that people are willing to travel to access these cafes. This analysis will provide valuable information for cafe owners, urban planners, and policymakers.
 
-The cafe point data was obtained from the OpenStreetMap (OSM) database using the OverPass Turbo API. The census tract data were obtained from the TIGER shapefiles and census demographics data, which the US Census Bureau provided.
-OSM prepared the Data, and it is not sure who and when it was prepared by. This is one of the limitations of the research.
-The cafe point data was originally in a geospatial format, while the census tract data was in the form of shapefiles and a CSV file. To make the data mappable, it may be necessary to perform a spatial join between the cafe point data and the census tract data, which combines the attributes of the two datasets based on their spatial relationship. Additionally, it may be necessary to perform data aggregation to summarise the data at a higher level of resolution, such as at the level of census tracts or neighborhoods.
-There were issues in data quality, one of them were outliers both in case of the number of cafes and lower quantiles of population, additionally, another issue experienced was census tracts with less population by more number of cafes; these are the outliers like JFK airport, we will remove them further. Otherwise, in terms of data quality, OSM dataset is not reliable, there are total ~3,600 coffee shops in nyc and the dataset has only 2591 observations. Since this is an academic project and our focus is strictly on methodology, we are using this dataset as is. 
+## Limitations and Data Quality
+It is important to acknowledge the limitations and data quality issues associated with this research project. Some of these limitations include:
+
+1. Data Preparation: The OSM dataset and census tract data will require careful cleaning and processing. Spatial join operations and data aggregation may be necessary to ensure compatibility and meaningful analysis.
+
+2. Outliers: Outliers, such as cafes located at JFK Airport or areas with a high number of cafes but a low population, may need to be removed from the analysis to avoid skewing the results.
+
+3. Data Completeness: The OSM dataset may not capture all cafes in NYC, as it contains only 2591 observations out of an estimated ~3,600 coffee shops. This limitation should be considered when interpreting the findings.
+
+Despite these limitations, the project aims to focus on the methodology and provide valuable insights into the clustering of third wave and local cafes in NYC.
+
+## Conclusion
+In conclusion, this research project on the clustering of third wave and local cafes in NYC offers valuable insights into the spatial patterns and factors driving the growth of the city's cafe culture. By utilizing GIS tools, spatial analysis techniques, and demographic data, the project provides a comprehensive understanding of the dynamics shaping the distribution of these cafes.
+
+Through the interactive map and static maps, viewers can visually explore the clusters of cafes and their relationship with surrounding demographic characteristics. This information is crucial for cafe owners, urban planners, and policymakers in making informed decisions related to cafe locations, community development, and targeted marketing strategies.
+
+Despite the limitations of the data, including potential outliers and data completeness issues, the project focuses on the methodology and establishes a solid foundation for future research in this field. By addressing the research questions regarding clustering, demographic influences, and travel distances, this study contributes to the scholarly understanding of the evolving coffee industry and its impact on urban environments.
+
+The findings of this research can pave the way for further investigations, allowing researchers, practitioners, and stakeholders to delve deeper into the socio-economic aspects of cafe clustering, customer behavior, and the implications for local communities. Ultimately, this research project aims to provide valuable insights and recommendations that can shape the future development and sustainability of the cafe industry in NYC.
 
 ## Interactive Map: 
 <iframe src= "map.html" height= "855" width= "95%">
